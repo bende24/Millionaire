@@ -1,0 +1,12 @@
+<table id="prizes">
+    {% for item in prizes %}
+    <tr data-id="{{item.id}}" class="{%  if item.checkpoint%} checkpoint {% endif %} {% if loop.last %} current-prize {% endif %}">
+        <td class="prize-id">{{item.number}}</td>
+        <td>{{item.prize}} Ft</td>
+    </tr>
+    {% endfor %}
+    <tr data-id="0" class="checkpoint" style="display:none">
+        <td class="prize-id">0</td>
+        <td>0 Ft</td>
+    </tr>
+</table>
